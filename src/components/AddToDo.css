@@ -1,0 +1,12 @@
+.add-to-do {
+  border: 0;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-lg);
+  background-color: transparent;
+  align-self: stretch;
+  position: relative;
+  line-height: 24px;
+  color: var(--color-slategray);
+  text-align: left;
+}

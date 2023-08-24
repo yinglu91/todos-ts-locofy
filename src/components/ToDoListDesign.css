@@ -1,0 +1,32 @@
+.divider {
+  align-self: stretch;
+  position: relative;
+  background-color: var(--color-darkslategray);
+  height: 1px;
+}
+.to-do-list-design,
+.todolistcontainer {
+  background-color: var(--color-gray-300);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.todolistcontainer {
+  flex: 1;
+  flex-direction: column;
+  padding: 64px 57px;
+  gap: 26px;
+}
+.to-do-list-design {
+  position: relative;
+  width: 499px;
+  flex-direction: row;
+  min-height: 100%px;
+}
+@media screen and (max-width: 420px) {
+  .todolistcontainer {
+    padding-left: var(--padding-13xl);
+    padding-right: var(--padding-13xl);
+    box-sizing: border-box;
+  }
+}

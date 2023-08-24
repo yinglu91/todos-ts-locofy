@@ -1,0 +1,32 @@
+.image-2 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background-image: url(/public/image2@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.make-responsive-on {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+  width: 323px;
+  flex-shrink: 0;
+}
+.todoincomplete {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gainsboro);
+  font-family: var(--font-inter);
+}
