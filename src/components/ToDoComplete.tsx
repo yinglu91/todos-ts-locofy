@@ -1,10 +1,15 @@
-import { FunctionComponent } from "react";
-import "./ToDoComplete.css";
-const ToDoComplete: FunctionComponent = () => {
+import './ToDoComplete.css';
+import { Todo } from './ToDoListDesign';
+
+type Props = {
+  todo: Todo;
+};
+
+const ToDoComplete = (props: Props) => {
   return (
-    <div className="todocomplete">
-      <button className="image-1" />
-      <div className="finish-designs">Finish designs</div>
+    <div className='todocomplete'>
+      <button className='image-1' />
+      <div className='finish-designs'>{props.todo.name}</div>
     </div>
   );
 };

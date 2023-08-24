@@ -1,10 +1,15 @@
-import { FunctionComponent } from "react";
-import "./ToDoIncomplete.css";
-const ToDoIncomplete: FunctionComponent = () => {
+import './ToDoIncomplete.css';
+import { Todo } from './ToDoListDesign';
+
+type Props = {
+  todo: Todo;
+};
+
+const ToDoIncomplete = ({ todo }: Props) => {
   return (
-    <div className="todoincomplete">
-      <button className="image-2" />
-      <div className="make-responsive-on">Make responsive on Figma</div>
+    <div className='todoincomplete'>
+      <button className='image-2' />
+      <div className='make-responsive-on'>{todo.name}</div>
     </div>
   );
 };
