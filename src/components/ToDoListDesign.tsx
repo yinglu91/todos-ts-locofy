@@ -21,7 +21,6 @@ const ToDoListDesign: FunctionComponent = () => {
   // const [todoList, setTodoList] = useState<Todo[]>([] as Todo[]);
   const [todoList, setTodoList] = useState(initTodos);
 
-  console.log('yyyyy', todoList);
   const addNewTodo = (name: string) => {
     const newTodo = {
       id: todoList.length + 1,
@@ -30,7 +29,7 @@ const ToDoListDesign: FunctionComponent = () => {
     };
 
     const updatedTodoList = [...todoList, newTodo];
-    console.log(updatedTodoList);
+    // console.log(updatedTodoList);
 
     setTodoList(updatedTodoList);
   };
