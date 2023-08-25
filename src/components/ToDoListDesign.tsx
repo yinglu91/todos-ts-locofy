@@ -35,6 +35,23 @@ const ToDoListDesign: FunctionComponent = () => {
     setTodoList(updatedTodoList);
   };
 
+  const toggleTodo = (id: number) => {
+    const todo = todoList.find((todo) => todo.id === id);
+    if (!todo) {
+      return;
+    }
+
+    const updatedTodoList = todoList.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, completed: !todo.completed };
+      } else {
+        return todo;
+      }
+    });
+
+    setTodoList(updatedTodoList);
+  };
+
   return (
     <div className='to-do-list-design'>
       <div className='todolistcontainer'>
@@ -44,9 +61,15 @@ const ToDoListDesign: FunctionComponent = () => {
         {todoList.map((todo) => (
           <React.Fragment key={todo.id}>
             {todo.completed ? (
-              <ToDoComplete todo={todo} />
+              <ToDoComplete
+                todo={todo}
+                toggleTodo={toggleTodo}
+              />
             ) : (
-              <ToDoIncomplete todo={todo} />
+              <ToDoIncomplete
+                todo={todo}
+                toggleTodo={toggleTodo}
+              />
             )}
           </React.Fragment>
         ))}
